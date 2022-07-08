@@ -1,0 +1,275 @@
+@import "./_mix";
+
+.models{
+    
+    width:100%;
+    margin: 20px auto;
+    padding: 20px;
+    
+  &-h{
+        text-align: center;
+        @include fnt($txt-clr, $fml:'Arial',$weight:700,$size:35px,$height:40px);
+        span{
+            color: $ft-clr; 
+        }
+        @media (max-width:500px) {
+            @include fnt($txt-clr, $fml:'Arial',$weight:700,$size:24px,$height:30px);
+        }
+    } 
+  &-block{
+    @extend .flx; 
+    justify-content: center;
+    min-height:550px;
+    align-items: center;
+    @media (max-width:992px) {
+        justify-content: flex-start;
+        min-height:400px;
+    }
+    @media (max-width:450px) {
+        min-height:350px;
+        margin-left: 5%;
+    }
+    
+    &-inf{
+        
+        @media (min-width:992px) {
+            flex: 0 0 40%;
+            max-width: 40%;
+        }
+
+        @media (max-width:992px) {
+           width: 70%
+        }
+        @media (max-width:400px) {
+            width: 100%;
+        }
+    
+        &-b{
+            background-color: #404040;
+            padding: 40px;
+
+            @media (max-width:1192px) {
+                padding: 30px;
+            }
+            @media (max-width:450px) {
+                padding: 10px;
+            }
+
+            p{
+                @include fnt($main-color, $fml:'Arial',$weight:400,$size:35px,$height:40px);
+                span {
+                    color: #DAA823;      
+                    margin-left: 15px;             
+                }
+
+                @media (max-width:992px) {
+                    font-size: 20px;
+                }
+                @media (max-width:1192px) {
+                    font-size: 25px;
+                }
+                @media (max-width:450px) {
+                    font-size: 18px;
+                }
+            }
+
+            div{
+                border-bottom: 1px solid #FFFFFF;
+                text-align: left;
+                
+                    span{
+                        @include fnt($main-color, $fml:'Arial', $weight:700, $size:20px, $height:56px);
+                        display: inline-block;
+                        margin: 0 10px;
+
+                        &:nth-of-type(2){
+                        @include fnt($md-clr, $fml:'Arial', $weight:400, $size:16px, $height:23px);
+                        @media (max-width:992px) {
+                             font-weight: 300;
+                             font-size: 12px;
+                             line-height:18px;
+                            }
+                        }
+                        @media (max-width:1192px) {
+                            margin: 0 5px;
+                            @include fnt($main-color, $fml:'Arial', $weight:500, $size:18px, $height:40px);
+                         
+                        }
+                        @media (max-width:1192px) {
+                            margin: 0 5px;
+                            @include fnt($main-color, $fml:'Arial', $weight:500, $size:12px, $height:40px);
+                         
+                        }
+                        }
+                    }            
+            }  
+    }
+
+    &-img{
+        position: relative;
+
+        img{
+            width: 450px;
+            height: auto;
+            position: absolute;
+            z-index: 22;
+            bottom: -360px;
+            left:-50px;
+            @media (max-width:1192px) {
+                width: 280px;
+                bottom: -270px;
+                left:-20px;
+            }
+            
+            @media (max-width:550px) {
+                width: 210px;
+                bottom: -240px;
+                left:-17px;
+            }
+            @media (max-width:400px) {
+                width: 180px;
+                bottom: -263px;
+               left:-193px;
+            }
+        }
+
+        @media (min-width:992px) {
+            flex: 0 0 40%;
+            max-width: 40%
+        }
+       
+    }
+}
+
+  &-block-btm{
+    margin-top: 80px;
+    min-height:550px;
+    position: relative;
+    @extend .flx; 
+    justify-content: center; 
+    align-items: center;
+
+    @media (max-width:992px) {
+        justify-content: flex-end;
+        min-height:400px;
+    }
+    @media (max-width:450px) {
+        min-height:350px;
+        margin-left: 5%;
+    }
+    
+    &-inf{
+        
+        @media (min-width:992px) {
+            flex: 0 0 40%;
+            max-width: 40%
+        }
+        @media (max-width:992px) {
+            width: 70%
+         }
+         @media (max-width:400px) {
+             width: 100%;
+             
+          }
+    
+        &-b{
+            background-color: #404040;
+            padding: 40px;
+            @media (max-width:992px) {
+                padding: 30px;
+            }
+            @media (max-width:450px) {
+                padding: 10px;
+            }
+            p{
+                @include fnt($main-color, $fml:'Arial', $weight:700, $size:35px, $height:40px);
+              
+                color: white;
+                span{
+                    color: #DAA823;       
+                    margin-left: 15px;              
+                }
+                @media (max-width:992px) {
+                    font-size: 20px;
+                }
+                @media (max-width:1192px) {
+                    font-size: 25px;
+                }
+                @media (max-width:450px) {
+                    font-size: 18px;
+                }
+            }
+            div{
+                border-bottom: 1px solid #FFFFFF;
+                text-align: left;
+                
+                    span{
+                        display: inline-block;
+                        margin: 0 10px;
+                        @include fnt($main-color, $fml:'Arial', $weight:700, $size:20px, $height:56px);
+                    
+                        &:nth-of-type(2){
+                            @include fnt($md-clr, $fml:'Arial', $weight:400, $size:16px, $height:23px);
+                           
+                            @media (max-width:992px) {
+                                font-weight: 300;
+                                font-size: 12px;
+                                line-height:18px;
+                            }
+                        }
+                        @media (max-width:1192px) {
+                            margin: 0 5px;
+                            @include fnt($main-color, $fml:'Arial', $weight:500, $size:18px, $height:40px);
+                         
+                        }
+                        @media (max-width:1192px) {
+                            margin: 0 5px;
+                            @include fnt($main-color, $fml:'Arial', $weight:500, $size:12px, $height:40px);
+                         
+                        }
+
+                        }
+                    }
+               }
+
+        } 
+        &-img {
+
+            position: relative;
+
+            img{
+                width: 450px;
+                height: auto;
+                position: absolute;
+                z-index: 22;
+                top:30px;
+                right:-40px;
+
+               
+                @media (max-width:1192px) {
+                    width: 280px;
+                    top: 30px;
+                    right:-20px;
+                }
+                
+                @media (max-width:560px) {
+                    width: 230px;
+                    top:70px;
+                    right:-20px;
+                }
+
+                @media (max-width:400px) {
+                    width: 180px;
+                    top:106px;
+                    left:15px;
+                }
+            }
+
+            @media (min-width:992px) {
+                flex: 0 0 40%;
+                max-width: 40%
+            }
+        }
+    }
+
+}

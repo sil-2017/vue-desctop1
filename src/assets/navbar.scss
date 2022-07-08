@@ -1,0 +1,61 @@
+@import "./_mix";
+
+.header{
+
+    @extend .flxx;
+    justify-content:space-around;  
+    align-items: baseline;
+    height: auto;
+    max-width: 1300px;
+    margin: 2px auto;
+    // display: none;
+
+    @media (min-width: 900px) {
+        display:flex;
+    }
+    @media (max-width: 900px) {
+        display:none;
+    }
+
+    &__logo__text {
+        @include fnt($txt-clr, $fml:'Roboto',$weight:400,$size:27px,$height:2);
+    }
+
+    &__navigation__link {
+        @include fnt($txt-clr, $fml:'Arial',$weight:400,$size:18px,$height:23px);
+        &_ul{
+            list-style-type: none;
+            @extend .flx;          
+            li{
+                cursor: pointer;
+                margin-inline: 60px;
+                line-height: 2;
+                &:first-child{
+                    position:relative;
+                    margin-right: 10px;
+                    &::before{
+                        content:url('./img/un.png');
+                        @include psAbs($width:13px, $height:6px);
+                        right:-20px;
+                        top: 0;
+                    }
+                }
+            }    
+        }
+    }
+    &__sel {   
+        @include fnt($txt-clr, $fml:'Arial', $weight:400, $size:18px,$height:23px);        
+        p{           
+            position: relative;
+            padding-right: 18px;
+            &::before{
+                content:url('./img/un.png');
+                @include psAbs($width:13px, $height:6px);
+                right:-5px;
+                top:0px;                
+            }
+        }
+      }   
+      
+}
+

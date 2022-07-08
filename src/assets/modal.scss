@@ -1,0 +1,66 @@
+.modal{
+    max-width: 1000px;
+    margin: 20px auto;
+    @extend .flx-r; 
+
+    @media  (max-width:995px) {
+        flex-direction: column;
+    }
+  
+   &-inf{
+        position: relative;
+        padding: 15px;
+
+        @media  (min-width: 995px) {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        
+        h1{
+            @include fnt($txt-clr, $fml:'Arial',$weight:700,$size:35px,$height:40px);
+            @media  (max-width: 505px) {
+                font-size: 18px;
+                line-height: 10px;
+                margin-top: 20px;
+            }
+        }
+
+        div{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            grid-gap:40px;
+
+            @media  (max-width: 505px) {
+                grid-gap:10px;
+            }
+
+            div{
+                @extend .flx-r; 
+                justify-content: space-between;
+                span{
+                    display: block;
+                    @include fnt($txt-clr, $fml:'Arial',$weight:700,$size:20px,$height:30px);
+                    @media  (max-width: 505px) {
+                        font-size: 16px;
+                    }
+                }
+                button{
+                    @include btn($txt-clr);
+                    color: white;
+                    @media  (max-width: 450px) {
+                        width: 124px;
+                        height: 30px;
+                    }
+                }
+            
+            }
+        }
+
+        p{
+            @include fnt($txt-clr2, $fml:'Arial CE',$weight:500,$size:16px,$height:23px);
+            text-align: justify;
+        }
+   }
+}

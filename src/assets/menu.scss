@@ -1,0 +1,40 @@
+
+@import "./_mix";
+
+.menu{
+    margin-top: 150px;
+    background:$bg-m;
+    @extend .flx; 
+    
+   
+    div{
+
+        position: relative;
+        width: 100%;
+        margin: 38px auto;
+
+        @media (min-width:992px) {
+            flex: 0 0 31.333333%;
+            max-width: 31.333333%;
+        }
+
+        img{
+            width: 60px;
+            position: relative;
+            left: 45%;
+        }
+        
+        p{
+            text-align: center;
+
+            span{
+                 display: block;
+                 text-align: center;
+                 color: white;
+                 font-size: 14px;
+                 letter-spacing: 1px;
+                 line-height: 2;
+                }
+            }
+    }
+}

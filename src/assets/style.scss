@@ -1,0 +1,76 @@
+@import "./variable.scss";
+@import "./navbar.scss";
+@import "./section.scss";
+@import "./sertif.scss";
+@import "./types.scss";
+@import "./menu.scss";
+@import "./about.scss";
+@import "./feed.scss";
+@import "./foother.scss";
+@import "./models.scss";
+@import "./_mix.scss";
+@import "./slayd.scss";
+@import "./modal.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ctr {
+    max-width: 1100px;
+    margin: 20px auto;
+}
+
+.app{
+    background: $main-color;
+    overflow-x: hidden;
+    display: block;
+    width: 100%;
+    
+}
+
+.cntr {
+    margin: 50px auto;
+    padding: 6px;
+    background-color: #fff;
+    border-radius: 8px;
+    max-width:80%;
+}
+
+.btn{
+    @include btn($tpr);
+    margin: 20px 0;
+    @media  (max-width: 450px) {
+        width: 144px;
+        height: 30px;
+    }
+}
+.mrg{
+    margin: 100px auto;
+    position: relative;
+}
+
+.cont{
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 50px auto;
+
+}
+
+.bg{
+    width: 100%;
+    background: #1A1A1A;
+    position: relative;
+  }
+
+ #app {
+    // text-align: center;
+    text-align: left;
+    }

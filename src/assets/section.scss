@@ -1,0 +1,173 @@
+@import "./_mix";
+
+.grid{
+    @extend .flx; 
+    max-width: 1200px;
+    margin: 5px auto;
+    @media  (max-width: 995px) {
+      justify-content: center;
+    }
+   
+    &-col{       
+        position: relative;
+        flex-wrap: wrap;
+        @media  (min-width: 995px) {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+      
+        &-r{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; 
+
+            p{
+                @include fnt($txt-clr3, $fml:'Arial',$weight:700,$size:30px,$height:44px);
+                letter-spacing: 0.820859px;            
+                text-align: left;
+                span{
+                    display: block;
+                }
+
+                @media  (max-width: 750px) {
+                    @include fnt($txt-clr3, $fml:'Arial',$weight:700,$size:18px,$height:35px);
+                }
+
+                @media  (max-width: 450px) {
+                    margin-top: 20px;
+                    @include fnt($txt-clr3, $fml:'Arial',$weight:800,$size:20px,$height:25px);
+                }              
+            }
+            p:nth-of-type(2){
+                @include fnt($txt-clr, $fml:'Arial',$weight:400,$size:18px,$height:34px);
+                letter-spacing: 0.820859px;            
+                text-align: left;
+                margin-top: 30px;
+
+                span{
+                    display: block;
+                }
+
+                @media  (max-width: 995px) {
+                    align-items: center;
+                    align-self: center;
+                    @include fnt($txt-clr, $fml:'Arial',$weight:400,$size:15px,$height:34px);
+                }
+            
+            }
+
+            @media  (max-width: 995px) {
+                align-items: center;
+                align-self: center;
+            }
+        }
+    
+        
+        &-cnt{
+            
+            position: relative;
+            width: 320px;
+            .grid-col-cnt_img{
+                width:250px;
+                height:330px;
+                background-image:url("./img/imageremovebg.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                z-index: 2;
+                position: absolute;
+                top:40px;
+                left:100px;
+                transition: all 1s ease;
+
+                @media (max-width:1200px) {
+                    width:200px;
+                    top:20px;
+                    left: 40px;
+                }
+
+                @media (max-width:850px) {
+                    width:180px;
+                    top:20px;
+                    left: 40px;
+                }
+
+                @media  (max-width:750px) {
+                    width:160px;
+                    top:20px;
+                    left: 40px;
+                }
+
+                @media  (max-width:500px) {
+                    width:130px;
+                    top:20px;
+                    left: 30px;
+                }
+            }
+                .bf{
+                   
+                    img{
+                        width:300px;
+                        height: auto;
+                        position: absolute;
+                        top:-15px;
+                        left:455px;
+                        z-index: 1;
+                        transition: all 1s ease;
+                        @media (max-width:1200px) {
+                            width:220px;
+                            top:-5px;
+                            left:319px;
+                        }
+                        @media (max-width:850px) {
+                            width:200px;
+                            top:-5px;
+                            left:319px;
+                        }
+                        @media  (max-width: 750px) {
+                            width:170px;
+                            top:-15px;
+                            left:220px;
+                        }
+                        @media  (max-width:500px) {
+                            width:150px;
+                            top:-15px;
+                            left:179px;
+                        }
+                    }
+                }
+                
+            .img{
+                width:330px;
+                height: auto;
+                position: absolute;
+                left:250px;
+                top: 100px;
+                z-index:4;
+                transition: all 1s ease;
+                @media (max-width:1200px) {
+                    width:260px;
+                    top:85px;
+                    left:135px;
+                }
+                @media (max-width:850px) {
+                    width:240px;
+                    left:140px;
+                    top: 80px;
+                }
+                @media  (max-width: 750px) {
+                    width:200px;
+                    left:140px;
+                    top: 80px;
+                }
+                
+                @media(max-width:500px) {
+                    width:180px;
+                    left:100px;
+                    top: 70px;
+                }
+                
+            } 
+        }
+    }
+    
+}

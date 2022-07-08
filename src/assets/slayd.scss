@@ -1,0 +1,133 @@
+
+  .vueGallery {
+
+    position: relative;
+
+    @media  (min-width: 995px) {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+   
+
+    &-big{
+
+      background-color: #F8F8F8;
+
+      .activePhoto {
+        width: 100%;
+        margin: 4px auto;
+        margin-bottom: 5px;
+        padding-bottom: 65%;
+        background-size:contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        position: relative;
+        background-color: #F8F8F8;
+        @media  (max-width: 995px) {
+          width: 50vw;
+      }
+       
+      }
+      button {
+        border: none;
+        background: transparent;
+        font-size: 32px;
+        color: #fff;
+        opacity: 0.5;
+        position: absolute;
+        outline: none;
+        width: 30px;
+        height: 30px;
+        border: 1px solid black;
+        border-radius: 50%;
+   
+  
+        i{
+          z-index: 99999;
+        }
+  
+        &:hover {
+          opacity: 1;
+        }
+
+        &.previous {
+          left: 10px;
+          top:50%;
+          z-index: 99;
+          color: black;
+          font-size: 20px;
+          @media  (max-width: 995px) {
+            left:2px;
+            top: 45%;
+            } 
+        
+          @media  (max-width:605px) {
+            left:2px;
+            top: 30%;
+            }         
+        }
+
+        &.next { 
+          right: 0;
+          top: 50%;
+          color: black;
+          font-size: 20px;
+          @media  (max-width: 995px) {
+            right:2px;
+            top: 45%;
+            } 
+
+           @media  (max-width:605px) {
+            right:2px;
+            top: 30%;
+          }
+        }
+      }
+    }
+    
+    
+    .thumbnails {
+
+      margin-left: 10%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+      grid-gap: 15px;
+
+      @media  (max-width: 995px) {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        grid-gap:5px;
+        margin-left:6%;
+      }
+      @media  (max-width: 995px) {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        grid-gap:5px;
+        margin-left:6%;
+      }
+
+
+      @media  (max-width: 605px) {
+        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+        grid-gap:0;
+        margin-left: 3%;
+      }
+     
+  
+      div {
+        width: 100%;
+        border: 2px solid #fff;
+        outline: 2px solid #fff;
+        cursor: pointer;
+        padding-bottom: 65%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.6;
+    
+        &.active {
+          opacity: 1;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+  

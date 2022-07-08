@@ -1,0 +1,91 @@
+
+@import "./_mix";
+
+.feedback{
+    margin: 60px auto;
+    @extend .flx;  
+    justify-content: center;
+    justify-content: baseline;
+ 
+    &-l{
+
+        background:$bg-m;
+        font-family: 'Arial';
+        padding: 20px;
+
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img{
+                width: 40px;   
+                margin: 23px auto;   
+            }
+           
+            p{
+                @include fnt($main-color, $fml:'Arial',$weight:400,$size:18px,$height:25px);
+                text-align: center;
+            }
+
+        }
+
+        @media (min-width:992px) {
+            flex: 0 0 41.333333%;
+            max-width: 41.333333%;
+        }
+        @media (max-width:992px) {
+            
+            width: 100%;
+        }
+
+    }
+
+
+    &-r{
+        background: #FFFFFF;
+        border: 1px solid #CED3CA;
+        text-align: center;
+        &-h{
+            @include fnt($txt-clr, $fml:'Arial',$weight:400,$size:35px,$height:40px);
+           
+            @media (max-width:992px) {
+                margin-top: 10px;
+                font-size:25px;
+                font-weight: 700;
+            }
+        }
+
+        &-inp{
+            width: 80%;
+            margin: 10px auto;
+
+            input{
+                border-radius: 3px;
+                margin: 10px 0;
+                height: 50px;
+                @extend .in;
+                padding: 3px;
+                
+            }
+            textarea {
+                height: 88px;
+                @extend .in;
+                resize: none;
+            }
+        }
+        
+        button{
+            background: #1A1A1A;
+            border-radius: 5px;
+            color: $main-color;
+        }
+        @media (min-width:992px) {
+            flex: 0 0 58.666667%;
+            max-width: 58.666667%;
+        }
+       
+
+    }
+
+}

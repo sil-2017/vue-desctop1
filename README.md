@@ -1,5 +1,14 @@
 # desctop1
 
+<!-- module.exports = {
+    publicPath: process.env.NODE_ENV === 'production'
+      ? '/vue-desctop1/'
+      : '/'
+  } -->
+
+the link
+https://sil-2017.github.io/vue-desctop1/
+
 ## Project setup
 ```
 npm install

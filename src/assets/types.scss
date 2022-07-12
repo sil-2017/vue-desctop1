@@ -8,12 +8,7 @@
      }
     
     &-h{
-        font-family: 'Arial';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 35px;
-        line-height: 40px;
-        color: #000000;
+        @include fnt($txt-clr, $fml:'Arial',$weight:700,$size:35px,$height:40px);
         margin: 20px 0;
 
         @media (max-width:702px) {

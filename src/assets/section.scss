@@ -36,7 +36,13 @@
                 @media  (max-width: 450px) {
                     margin-top: 20px;
                     @include fnt($txt-clr3, $fml:'Arial',$weight:800,$size:20px,$height:25px);
-                }              
+                    text-align: center;
+                }    
+                @media  (max-width: 350px) {
+                    margin-top: 20px;
+                    @include fnt($txt-clr3, $fml:'Arial',$weight:800,$size:17px,$height:25px);
+                    
+                }           
             }
             p:nth-of-type(2){
                 @include fnt($txt-clr, $fml:'Arial',$weight:400,$size:18px,$height:34px);
@@ -46,6 +52,9 @@
 
                 span{
                     display: block;
+                    @media  (max-width: 450px) {                      
+                        text-align: left;                       
+                    } 
                 }
 
                 @media  (max-width: 995px) {
@@ -53,6 +62,12 @@
                     align-self: center;
                     @include fnt($txt-clr, $fml:'Arial',$weight:400,$size:15px,$height:34px);
                 }
+                @media  (max-width: 450px) {
+                    margin-top: 20px;
+                    @include fnt($txt-clr3, $fml:'Arial',$weight:800,$size:12px,$height:25px);
+                    text-align: center;
+                    
+                }  
             
             }
 

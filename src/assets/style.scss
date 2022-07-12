@@ -46,6 +46,9 @@
         width: 144px;
         height: 30px;
     }
+    @media  (max-width: 350px) {                      
+        width: 124px;                       
+    } 
 }
 .mrg{
     margin: 100px auto;

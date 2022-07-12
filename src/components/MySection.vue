@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="grid ">
-            <div class="grid-col ">
+            <div class="grid-col">
                 <div class="grid-col-r">
                     <p><span>Պատրաստում ենք ցանկացած</span> <span>տեսակի թերմո պայուսակներ</span></p> 
                     <p>
